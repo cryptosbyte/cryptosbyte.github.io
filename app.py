@@ -3,16 +3,15 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///cryptos.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///blogs.db"
 db = SQLAlchemy(app)
-db.create_all()
-
 
 class Posts(db.Model):
     post_id = db.Column(db.Integer, primary_key=True)
-    post_content = db.Column(db.String(99999999), nullable=False)
+    post_content = db.Column(db.String(5000), nullable=False)
     post_creation_date = db.Column(db.String(60), nullable=False)
     post_name = db.Column(db.String(200), nullable=False)
+    post_header_tags = db.Column(db.String(500), nullable=False)
     post_short_desc = db.Column(db.String(300), nullable=True)
 
     def __repr__(self):
@@ -41,7 +40,4 @@ def blog(blog_id):
 
 
 if __name__ == "__main__":
-    app.run(
-        # host="0.0.0.0", port=8080
-        # debug=True
-    )
+    app.run()

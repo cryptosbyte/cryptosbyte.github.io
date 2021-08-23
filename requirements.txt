@@ -1,3 +1,3 @@
-flask
-flask_sqlalchemy
-gunicorn
+flask # Web Server
+flask_sqlalchemy # SQL Database
+gunicorn # Running Flask Server on the web
