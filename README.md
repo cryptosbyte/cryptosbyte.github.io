@@ -2,7 +2,7 @@
 
 This is my blog website (which I sadly cannot run currently but maybe in the future) which will contain articles, lifestyle, etc. Feel free to contribute to this project/app by sending a commit.
 If you'd like to run the server: 
-###### first install the packages...
+###### First install the packages...
 ```sh
 $ python3 -m pip install -r requirements
 ```
